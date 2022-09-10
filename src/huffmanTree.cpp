@@ -1,4 +1,4 @@
-#include "arvoreHuffman.hpp"
+#include "huffmanTree.hpp"
 
 void inicializa_lista_Huff(TlistaHuff &l){
     l.inicio = nullptr;

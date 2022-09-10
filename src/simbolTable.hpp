@@ -1,7 +1,7 @@
 #ifndef TABELASIMBOLOS_HPP
 #define TABELASIMBOLOS_HPP
 
-#include "arvoreHuffman.hpp"
+#include "huffmanTree.hpp"
 
 typedef struct dadoTabela dadoTabela;
 typedef struct tabelaSimbolos tabelaSimbolos;

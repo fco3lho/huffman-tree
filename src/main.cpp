@@ -1,62 +1,39 @@
-#include "tabelaSimbolos.hpp"
-#include "arvoreHuffman.hpp"
-#include "huff.hpp"
+#include "simbolTable.hpp"
+#include "huffmanTree.hpp"
+#include "manipulation.hpp"
 
 using namespace std;
 
 int main()
 {
-    TlistaHuff lista1;
+    TlistaHuff list;
 
-    inicializa_lista_Huff(lista1);
-    readText_insertList(lista1);
+    inicializa_lista_Huff(list);
+    readText_insertList(list); //Trata as palavras e as joga na lista da árvore
 
-    // string frase = "VAI TOMAR NO CU CU CARALHO";
-    // string fraseConc;
-    // string fraseCode;
-    // stringstream X(frase);
-
-    // vector<string> tokens;
-
-    // cout << "FRASE: " << frase << endl;
-
-    // while(getline(X, fraseConc, ' ')){
-    //     cout << fraseConc << endl;
-    //     tokens.push_back(fraseConc);
-    //     insere_dado_inicio_huff(lista1, fraseConc);
-    // }
-
-    imprimir_lista_Huff(lista1);
-    ordernar_freq_Huff(lista1);
-    imprimir_lista_Huff(lista1);
+    imprimir_lista_Huff(list);
+    ordernar_freq_Huff(list);
+    imprimir_lista_Huff(list);
 
     cout << endl << "______________________________________________________________" << endl;
     cout << "\tINICIA A CONSTRUÇÃO DA ÁRVORE" << endl;
-    arvore_Huff(lista1);
+    arvore_Huff(list);
 
     cout << endl << "______________________________________________________________" << endl;
     cout << "\t\tIMPRESSÃO DA ÁRVORE" << endl << endl;
-    imprimir_prefixo(lista1.inicio,0);
+    imprimir_prefixo(list.inicio, 0);
 
-    tabelaSimbolos tabela;
-    inicializa_tabelaSimbolos(tabela);
+    tabelaSimbolos table;
+    inicializa_tabelaSimbolos(table);
 
-    preenche_tabela(tabela, lista1.inicio,"");
+    preenche_tabela(table, list.inicio,"");
 
-    imprime_tabela(tabela);
+    imprime_tabela(table);
 
     cout << endl << "______________________________________________________________" << endl;
     cout << "\tCODIFICAÇÃO DO TEXTO EM CÓDIGO DE HUFFMAN" << endl << endl;
 
-    // cout << endl << words.size() << endl;
-
-    // for(int i = 0; i < int(words.size()); i++){
-    //     test = words[i];
-    //     cout << words[i] << endl;
-    //     // cout << codificacao_huff(tabela, test) << " ";
-    // }
-
-    cout << endl;
+    saveCodeHuffman(table);
     
     return 0;
 }

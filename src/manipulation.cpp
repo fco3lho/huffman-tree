@@ -1,4 +1,4 @@
-#include "huff.hpp"
+#include "manipulation.hpp"
 
 string clearString(string line){
 	transform(line.begin(), line.end(), line.begin(), ::tolower);
@@ -29,7 +29,7 @@ void readText_insertList(TlistaHuff &l){
 
 	float normalize;
 
-	myfile.open("filosofia2.txt");
+	myfile.open("filosofia.txt");
 
 	if(myfile.is_open()){
 		while(! myfile.eof()){
@@ -77,4 +77,30 @@ void readText_insertList(TlistaHuff &l){
 			insere_dado_inicio_huff(l, auxWord, normalize);
 		}
 	}
+}
+
+void saveCodeHuffman(tabelaSimbolos tabela){
+	ifstream myfile;
+	string line;
+	vector<string> token;
+
+	myfile.open("filosofia.txt");
+
+	if(myfile.is_open()){
+		while(! myfile.eof()){
+			getline(myfile, line, ' ');
+			line = clearString(line);
+			token.push_back(line);
+		}
+		myfile.close();
+	}
+	else{
+		cout << "Error!" << endl;
+	}
+
+	for(int i = 0; i < int(token.size()); i++){
+		cout << codificacao_huff(tabela, token[i]);
+	}
+
+	cout << endl;
 }

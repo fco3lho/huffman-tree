@@ -1,4 +1,4 @@
-#include "tabelaSimbolos.hpp"
+#include "simbolTable.hpp"
 
 void inicializa_tabelaSimbolos(tabelaSimbolos &t){
     t.inicio = nullptr;

@@ -1,9 +1,11 @@
 #ifndef HUFF_HPP
 #define HUFF_HPP
 
-#include "arvoreHuffman.hpp"
+#include "huffmanTree.hpp"
+#include "simbolTable.hpp"
 
 string clearString(string line);
 void readText_insertList(TlistaHuff &l);
+void saveCodeHuffman(tabelaSimbolos tabela);
 
 #endif
