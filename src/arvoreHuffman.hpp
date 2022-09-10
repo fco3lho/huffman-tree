@@ -5,6 +5,10 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <vector>
+#include <algorithm>
+#include <cctype>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,20 +16,20 @@ typedef struct noHuffman noHuffman;
 typedef struct TlistaHuff TlistaHuff;
 
 struct noHuffman{
-    char dado;
-    int freq;
+    string dado;
+    float freq;
     noHuffman *prox;
     noHuffman *esq;
     noHuffman *dir;
 };
 
 struct TlistaHuff{
-    noHuffman * inicio;
+    noHuffman *inicio;
 };
 
 void inicializa_lista_Huff(TlistaHuff &l);
 void insere_inicio_huff(TlistaHuff &l, noHuffman *novo);
-void insere_dado_inicio_huff(TlistaHuff &l, char dado);
+void insere_dado_inicio_huff(TlistaHuff &l, string dado, float normalize);
 
 noHuffman *remove_no_lista(TlistaHuff &l);
 

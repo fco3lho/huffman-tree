@@ -7,8 +7,8 @@ typedef struct dadoTabela dadoTabela;
 typedef struct tabelaSimbolos tabelaSimbolos;
 
 struct dadoTabela{
-    char dado;
-    int freq;
+    string dado;
+    float freq;
     string cod;
     dadoTabela *prox;
 };
@@ -21,6 +21,6 @@ void inicializa_tabelaSimbolos(tabelaSimbolos &t);
 void insere_inicio_tabela(tabelaSimbolos &t, dadoTabela *novo);
 void preenche_tabela(tabelaSimbolos &t, noHuffman *no, string codigo);
 void imprime_tabela(tabelaSimbolos t);
-string codificacao_huff(tabelaSimbolos t, char letra);
+string codificacao_huff(tabelaSimbolos t, string letra);
 
 #endif
