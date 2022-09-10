@@ -65,8 +65,8 @@ void ordernar_freq_Huff(TlistaHuff &l){
     bool ordenado = false;
     noHuffman *aux = new noHuffman;
 
-    cout << endl << "______________________________________________________________" << endl;
-    cout << "\tORDENANDO LISTA PELA FREQUÊNCIA" << endl;
+    // cout << endl << "______________________________________________________________" << endl;
+    // cout << "\tORDENANDO LISTA PELA FREQUÊNCIA" << endl;
    
     while(ordenado!=true){
         ordenado = true;
@@ -123,19 +123,19 @@ void arvore_Huff(TlistaHuff &l){
             else if (nav->prox == nullptr){
                 novo->prox = nav->prox;
                 nav->prox = novo;
-                imprimir_lista_Huff(l);
+                // imprimir_lista_Huff(l);
                 break;
             }
             // Inserção na posição anterior ao valor maior
             else if(nav->prox->freq >= novo->freq){
                 novo->prox = nav->prox;
                 nav->prox = novo;
-                imprimir_lista_Huff(l);
+                // imprimir_lista_Huff(l);
                 break;
             }
             nav = nav->prox;
         }
     }
     
-    imprimir_lista_Huff(l);
+    // imprimir_lista_Huff(l);
 }

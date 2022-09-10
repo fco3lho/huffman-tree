@@ -84,6 +84,8 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	string line;
 	vector<string> token;
 
+	FILE *binArq;
+
 	myfile.open("filosofia.txt");
 
 	if(myfile.is_open()){
@@ -98,9 +100,22 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		cout << "Error!" << endl;
 	}
 
+	binArq = fopen("binarieFile.dat", "wb");
+
+	if(binArq == NULL){
+		cout << "Error!" << endl;
+		return;
+	}
+
+	string test;
+
 	for(int i = 0; i < int(token.size()); i++){
 		cout << codificacao_huff(tabela, token[i]);
+		test = codificacao_huff(tabela, token[i]);
+		fwrite(&test, sizeof(bool), 1, binArq);
 	}
+
+	fclose(binArq);
 
 	cout << endl;
 }

@@ -11,27 +11,24 @@ int main()
     inicializa_lista_Huff(list);
     readText_insertList(list); //Trata as palavras e as joga na lista da árvore
 
-    imprimir_lista_Huff(list);
+    // imprimir_lista_Huff(list);
     ordernar_freq_Huff(list);
-    imprimir_lista_Huff(list);
+    // imprimir_lista_Huff(list);
 
-    cout << endl << "______________________________________________________________" << endl;
-    cout << "\tINICIA A CONSTRUÇÃO DA ÁRVORE" << endl;
+    // cout << endl << "______________________________________________________________" << endl;
+    // cout << "\tINICIA A CONSTRUÇÃO DA ÁRVORE" << endl;
     arvore_Huff(list);
 
-    cout << endl << "______________________________________________________________" << endl;
-    cout << "\t\tIMPRESSÃO DA ÁRVORE" << endl << endl;
-    imprimir_prefixo(list.inicio, 0);
+    // cout << endl << "______________________________________________________________" << endl;
+    // cout << "\t\tIMPRESSÃO DA ÁRVORE" << endl << endl;
+    // imprimir_prefixo(list.inicio, 0);
 
     tabelaSimbolos table;
     inicializa_tabelaSimbolos(table);
-
     preenche_tabela(table, list.inicio,"");
+    // imprime_tabela(table);
 
-    imprime_tabela(table);
-
-    cout << endl << "______________________________________________________________" << endl;
-    cout << "\tCODIFICAÇÃO DO TEXTO EM CÓDIGO DE HUFFMAN" << endl << endl;
+    cout << "\t\t\tCODIFICAÇÃO DO TEXTO EM CÓDIGO DE HUFFMAN" << endl << endl;
 
     saveCodeHuffman(table);
     

@@ -31,8 +31,8 @@ void preenche_tabela(tabelaSimbolos &t, noHuffman *no, string codigo){
 }
 
 void imprime_tabela(tabelaSimbolos t){
-    cout << endl << "______________________________________________________________" << endl;
-    cout  << "\t\tImprimindo a tabela" << endl << endl;
+    // cout << endl << "______________________________________________________________" << endl;
+    // cout  << "\t\tImprimindo a tabela" << endl << endl;
     if(t.inicio == nullptr){
         cout << "Tabela vazia" << endl;
     }else{
