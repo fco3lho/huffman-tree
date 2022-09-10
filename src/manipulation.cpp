@@ -100,7 +100,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		cout << "Error!" << endl;
 	}
 
-	binArq = fopen("binarieFile.dat", "wb");
+	binArq = fopen("binarieFile.bin", "wb");
 
 	if(binArq == NULL){
 		cout << "Error!" << endl;
