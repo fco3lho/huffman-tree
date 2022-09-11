@@ -84,7 +84,9 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	string line;
 	vector<string> token;
 
-	FILE *binArq;
+	vector<bool> binarie;
+	char varTrue = '1';
+	char varFalse = '0';
 
 	myfile.open("filosofia.txt");
 
@@ -100,19 +102,33 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		cout << "Error!" << endl;
 	}
 
-	binArq = fopen("binarieFile.bin", "wb");
+	FILE *binArq = fopen("binarieFile.bin", "wb");
 
-	if(binArq == NULL){
+	if(!binArq){
 		cout << "Error!" << endl;
 		return;
 	}
 
-	string test;
+	string codeComplete;
 
 	for(int i = 0; i < int(token.size()); i++){
 		cout << codificacao_huff(tabela, token[i]);
-		test = codificacao_huff(tabela, token[i]);
-		fwrite(&test, sizeof(bool), 1, binArq);
+		codeComplete += codificacao_huff(tabela, token[i]);
+		// fwrite(&test, sizeof(bool), 1, binArq);
+	}
+
+	for(int i = 0; i < int(codeComplete.length()); i++){
+		if(codeComplete.at(i) == varTrue){
+			binarie.push_back(true);
+		}
+		else if(codeComplete.at(i) == varFalse){
+			binarie.push_back(false);
+		}
+	}
+
+	for(int i = 0; i < int(binarie.size()); i++){
+		bool aux = binarie[i];
+		fwrite(&aux, sizeof(bool), 1, binArq);
 	}
 
 	fclose(binArq);
