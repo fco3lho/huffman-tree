@@ -131,7 +131,9 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		fwrite(&aux, sizeof(bool), 1, binArq);
 	}
 
+	cout << endl << endl << "- Código gravado no arquivo binário." << endl;
+
 	fclose(binArq);
 
-	cout << endl;
+	cout << "- Arquivo binário fechado." << endl;
 }
