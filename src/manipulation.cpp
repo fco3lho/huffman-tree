@@ -77,6 +77,8 @@ void readText_insertList(TlistaHuff &l){
 			insere_dado_inicio_huff(l, auxWord, normalize);
 		}
 	}
+
+	token.clear();
 }
 
 void saveCodeHuffman(tabelaSimbolos tabela){
@@ -112,10 +114,11 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	string codeComplete;
 
 	for(int i = 0; i < int(token.size()); i++){
-		cout << codificacao_huff(tabela, token[i]);
+		cout << codificacao_huff(tabela, token[i]) << " ";
 		codeComplete += codificacao_huff(tabela, token[i]);
-		// fwrite(&test, sizeof(bool), 1, binArq);
 	}
+
+	token.clear();
 
 	for(int i = 0; i < int(codeComplete.length()); i++){
 		if(codeComplete.at(i) == varTrue){
@@ -130,6 +133,8 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		bool aux = binarie[i];
 		fwrite(&aux, sizeof(bool), 1, binArq);
 	}
+
+	binarie.clear();
 
 	cout << endl << endl << "- Código gravado no arquivo binário." << endl;
 
