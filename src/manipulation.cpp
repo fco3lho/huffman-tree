@@ -102,7 +102,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		cout << "Error!" << endl;
 	}
 
-	FILE *binArq = fopen("binarieFile.bin", "wb");
+	FILE *binArq = fopen("binaryFile.bin", "wb");
 
 	if(!binArq){
 		cout << "Error!" << endl;
