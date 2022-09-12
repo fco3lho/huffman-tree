@@ -186,7 +186,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 		cout << "Error!" << endl;
 	}
 
-	FILE *binArq = fopen("binarieFile.bin", "wb");
+	FILE *binArq = fopen("binaryFile.bin", "wb");
 
 	if(!binArq){
 		cout << "Error!" << endl;
@@ -236,6 +236,22 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 </ul>
 
 ## Funcionamento
+
+<ul>
+ <li>Inicialmente o arquivo deve ser baseado como o arquivo de texto abaixo:</li>
+  	<p align="center">
+  		<img src="/imgs/text.jpg">
+	</p>	
+ <li>Possuindo o arquivo de texto no padrão requerido, podemos executar o programa utilizando o método de compilação e execução. Executando o programa, o usuário receberá uma impressão do código de Huffman do texto utilizado e as mensagens de que o código foi escrito no arquivo binário e que o arquivo binário foi encerrado. Segue abaixo a demonstração:</li>
+ 	<p align="center">
+  		<img src="/imgs/execute.jpg">
+	</p>
+	Lembrando que é sempre preferível dar um <code>make clean</code> antes de um <code>make</code> para executar o programa.
+ <li>O arquivo binário será gerado e salvo na mesma pasta do arquivo de texto a ser codificado com o nome de <i>binaryFile</i>. Abaixo podemos ver o código gerado no arquivo binário aberto em um Blocos de Notas do Windows 11:</li>
+ 	<p align="center">
+  		<img src="/imgs/binary.jpg">
+	</p>
+</ul>
 
 ## Compilação e Execução
 
