@@ -10,10 +10,9 @@ void insere_inicio_tabela(tabelaSimbolos &t, dadoTabela *novo){
 }
 
 void preenche_tabela(tabelaSimbolos &t, noHuffman *no, string codigo){
-    string test = "-";
 
     //Nó possui conteúdo
-    if(no->dado != test){
+    if(no->dado != "-"){
         dadoTabela *novo = new dadoTabela;
         novo->dado = no->dado;
         novo->freq = no->freq;
@@ -42,13 +41,13 @@ void imprime_tabela(tabelaSimbolos t){
     }
 }
 
-string codificacao_huff(tabelaSimbolos t, string letra){
+string codificacao_huff(tabelaSimbolos t, string palavra){
     if(t.inicio == nullptr){
         cout << " ||Tabela vazia|| ";
     }
     else{
         for(dadoTabela*nav = t.inicio; nav != NULL; nav = nav->prox){
-            if(nav->dado == letra){
+            if(nav->dado == palavra){
                 return nav->cod;
             }
         }

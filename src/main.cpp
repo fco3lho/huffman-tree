@@ -28,7 +28,7 @@ int main()
     preenche_tabela(table, list.inicio,"");
     // imprime_tabela(table);
 
-    cout << "\t\t\tCODIFICAÇÃO DO TEXTO EM CÓDIGO DE HUFFMAN" << endl << endl;
+    cout << "\n\t\t\tCODIFICAÇÃO DO TEXTO EM CÓDIGO DE HUFFMAN" << endl << endl;
 
     saveCodeHuffman(table);
     

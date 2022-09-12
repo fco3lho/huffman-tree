@@ -3,18 +3,15 @@
 string clearString(string line){
 	transform(line.begin(), line.end(), line.begin(), ::tolower);
 
-	line.erase(remove(line.begin(), line.end(), ','), line.end());
-	line.erase(remove(line.begin(), line.end(), '.'), line.end());
-	line.erase(remove(line.begin(), line.end(), ' '), line.end());
-	line.erase(remove(line.begin(), line.end(), '\t'), line.end());
-	line.erase(remove(line.begin(), line.end(), ')'), line.end());
-	line.erase(remove(line.begin(), line.end(), '('), line.end());
-	line.erase(remove(line.begin(), line.end(), '<'), line.end());
-	line.erase(remove(line.begin(), line.end(), '>'), line.end());
-	line.erase(remove(line.begin(), line.end(), ':'), line.end());
-	line.erase(remove(line.begin(), line.end(), ';'), line.end());
-	line.erase(remove(line.begin(), line.end(), '?'), line.end());
-	line.erase(remove(line.begin(), line.end(), '!'), line.end());
+	string temp;
+
+	for(int i = 0; i < int(line.size()); i++){
+		if(line[i] >= 'a' && line[i] <= 'z'){
+			temp = temp + line[i];
+		}
+	}
+
+	line = temp;
 
 	return line;
 }
@@ -29,7 +26,7 @@ void readText_insertList(TlistaHuff &l){
 
 	float normalize;
 
-	myfile.open("filosofia.txt");
+	myfile.open("document.txt");
 
 	if(myfile.is_open()){
 		while(! myfile.eof()){
@@ -90,12 +87,13 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	char varTrue = '1';
 	char varFalse = '0';
 
-	myfile.open("filosofia.txt");
+	myfile.open("document.txt");
 
 	if(myfile.is_open()){
 		while(! myfile.eof()){
 			getline(myfile, line, ' ');
 			line = clearString(line);
+			// cout << line << endl;
 			token.push_back(line);
 		}
 		myfile.close();
@@ -114,7 +112,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	string codeComplete;
 
 	for(int i = 0; i < int(token.size()); i++){
-		cout << codificacao_huff(tabela, token[i]) << " ";
+		cout << codificacao_huff(tabela, token[i]);
 		codeComplete += codificacao_huff(tabela, token[i]);
 	}
 
