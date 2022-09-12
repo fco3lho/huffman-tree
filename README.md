@@ -13,7 +13,15 @@ Elaborar uma árvore binária que utilize o código de Huffman para comprimir ar
   <li>Salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.</li>
 </ol>
 
-Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da aplicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitor o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
+## Conteúdo do README
+
+<p align="center">
+ <a href="#arquivos-usados">Arquivos usados</a> •
+ <a href="#c%C3%B3digo">Código</a> •
+ <a href="#observa%C3%A7%C3%B5es">Observações</a> •
+ <a href="#funcionamento">Funcionamento</a> •
+ <a href="#compila%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o">Compilação e execução</a>
+</p>
 
 ## Arquivos usados
 
@@ -252,10 +260,6 @@ void saveCodeHuffman(tabelaSimbolos tabela){
   		<img src="/imgs/binary.jpg">
 	</p>
 </ul>
-
-## Conclusão
-
-
 
 ## Compilação e Execução
 
