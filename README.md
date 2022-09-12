@@ -35,7 +35,9 @@ Elaborar uma árvore binária que utilize o código de Huffman para comprimir ar
 
 Desconsiderando a codificação para o funcionamento da árvore de Huffman, foram usadas apenas três funções para realizar a compactação do arquivo de texto, são elas: <code>clearString(string line)</code>, <code>readText_insertList(TlistaHuff &l)</code> e <code>saveCodeHuffman(tabelaSimbolos tabela)</code>.
 
-### <i>clearString(string line)</i>
+### Explicação da função <i>clearString(string line)</i>
+
+Abaixo será descrito o passo a passo da função em uma forma de lista para melhor entendimento:
 
 <ol>
   <li>Passado um parâmetro para transformar toda a string recebida em uma string lower case.</li>
@@ -65,7 +67,9 @@ string clearString(string line){
 }
 ```
 
-### <i>readText_insertList(TlistaHuff &l)</i>
+### Explicação da função <i>readText_insertList(TlistaHuff &l)</i>
+
+Abaixo será descrito o passo a passo da função em uma forma de lista para melhor entendimento:
 
 <ol>
   <li>Declaração das variáveis que serão necessárias, como a variável para abrir o arquivo de texto, a string para receber as palavras do arquivo de texto, um vetor de strings onde serão colocados as palavras do arquivo de texto, uma variável para contar a repetição de cada palavra, as variáveis para salvar qual foi o número máximo e mínimo de repetições e a variável para salvar o cálculo de normalização.</li>
@@ -147,7 +151,9 @@ void readText_insertList(TlistaHuff &l){
 }
 ```
 
-### <i>saveCodeHuffman(tabelaSimbolos tabela)</i>
+### Explicação da função <i>saveCodeHuffman(tabelaSimbolos tabela)</i>
+
+Abaixo será descrito o passo a passo da função em uma forma de lista para melhor entendimento:
 
 <ol>
   <li>Declaração das variáveis que serão necessárias, como a variável para abrir o arquivo de texto, a string para receber as palavras do arquivo de texto, um vetor de strings onde serão colocados as palavras do arquivo de texto, um vetor de booleanos para salvar o código de Huffman e mandá-lo para um arquivo binário.</li>
