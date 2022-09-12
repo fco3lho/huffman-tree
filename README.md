@@ -13,7 +13,15 @@ Elaborar uma árvore binária que utilize o código de Huffman para comprimir ar
   <li>Salve o arquivo em formato binário e observe qual foi o ganho de espaço obtido.</li>
 </ol>
 
-Elabore um Readme.mb explicando toda lógica utilizada na implementação, bem como, exemplos para representar funcionalidades da aplicação. Feito isso, demonstre um desses exemplos em execução para detalhar para o leitor o que ele deve esperar como saída. Além disso, detalhe tudo que for importante no código e mostre como deve ser compilado.
+## Conteúdo do README
+
+<p align="center">
+ <a href="#arquivos-usados">Arquivos usados</a> •
+ <a href="#c%C3%B3digo">Código</a> •
+ <a href="#observa%C3%A7%C3%B5es">Observações</a> •
+ <a href="#funcionamento">Funcionamento</a> •
+ <a href="#compila%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o">Compilação e execução</a>
+</p>
 
 ## Arquivos usados
 
@@ -238,16 +246,16 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 ## Funcionamento
 
 <ul>
- <li>Inicialmente o arquivo deve ser baseado como o arquivo de texto abaixo:</li>
+ <li>Inicialmente o arquivo deve ser baseado como o arquivo de texto abaixo:</li> <br>
   	<p align="center">
   		<img src="/imgs/text.jpg">
 	</p>	
- <li>Possuindo o arquivo de texto no padrão requerido, podemos executar o programa utilizando o método de compilação e execução. Executando o programa, o usuário receberá uma impressão do código de Huffman do texto utilizado e as mensagens de que o código foi escrito no arquivo binário e que o arquivo binário foi encerrado. Segue abaixo a demonstração:</li>
+ <li>Possuindo o arquivo de texto no padrão requerido, podemos executar o programa utilizando o método de compilação e execução. Executando o programa, o usuário receberá uma impressão do código de Huffman do texto utilizado e as mensagens de que o código foi escrito no arquivo binário e que o arquivo binário foi encerrado. Segue abaixo a demonstração:</li> <br>
  	<p align="center">
   		<img src="/imgs/execute.jpg">
 	</p>
 	Lembrando que é sempre preferível dar um <code>make clean</code> antes de um <code>make</code> para executar o programa.
- <li>O arquivo binário será gerado e salvo na mesma pasta do arquivo de texto a ser codificado com o nome de <i>binaryFile</i>. Abaixo podemos ver o código gerado no arquivo binário aberto em um Blocos de Notas do Windows 11:</li>
+ <li>O arquivo binário será gerado e salvo na mesma pasta do arquivo de texto a ser codificado com o nome de <i>binaryFile</i>. Abaixo podemos ver o código gerado no arquivo binário aberto em um Blocos de Notas do Windows 11:</li> <br>
  	<p align="center">
   		<img src="/imgs/binary.jpg">
 	</p>
