@@ -265,6 +265,12 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	</p>
 </ul>
 
+## Conclusão
+
+Como conclusão da compactação do arquivo de texto usado no código e a partir da fórmula de erro: $$Erro = |\frac{compac - normal}{normal}| * 100$$
+
+Foi possível observar um ganho de <strong>0,72%</strong> de tamanho de arquivo, sendo o arquivo de texto com <strong>2,76kB</strong> e o arquivo binário com <strong>2,74kB</strong>.
+
 ## Compilação e Execução
 
 O repositório possui um arquivo <i>Makefile</i> que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
