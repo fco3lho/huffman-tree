@@ -1,19 +1,18 @@
 #include "manipulation.hpp"
 
-string clearString(string line){
-	transform(line.begin(), line.end(), line.begin(), ::tolower);
+string clearString(string s){
+	string aux;
 
-	string temp;
-
-	for(int i = 0; i < int(line.size()); i++){
-		if(line[i] >= 'a' && line[i] <= 'z'){
-			temp = temp + line[i];
+	for (int i = 0; i < int(s.size()); i++) {
+		if (s[i] != '.' && s[i]!= ',' && s[i] != ':' && s[i] != ';' && s[i] != '?' && s[i] != '!' && s[i] != '(' && s[i] != ')' && s[i] != '[' && s[i] != ']' && s[i] != '{'
+			&& s[i] != '}' && s[i] != '+'&& s[i] != '=' && s[i] != '-' && s[i] != '*' && s[i] != '/' && s[i] != '%' && !isdigit(s[i])) {
+			
+			s[i] = tolower(s[i]);
+            aux += s[i];
 		}
 	}
-
-	line = temp;
-
-	return line;
+ 
+	return aux;
 }
 
 void readText_insertList(TlistaHuff &l){
@@ -112,7 +111,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 	string codeComplete;
 
 	for(int i = 0; i < int(token.size()); i++){
-		cout << codificacao_huff(tabela, token[i]);
+		cout << codificacao_huff(tabela, token[i]) << " ";
 		codeComplete += codificacao_huff(tabela, token[i]);
 	}
 

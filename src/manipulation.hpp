@@ -4,7 +4,7 @@
 #include "huffmanTree.hpp"
 #include "simbolTable.hpp"
 
-string clearString(string line);
+string clearString(string s);
 void readText_insertList(TlistaHuff &l);
 void saveCodeHuffman(tabelaSimbolos tabela);
 
