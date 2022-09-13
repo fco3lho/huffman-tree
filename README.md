@@ -26,14 +26,14 @@ Elaborar uma árvore binária que utilize o código de Huffman para comprimir ar
 ## Arquivos usados
 
 <ul>
-  <li>Nos arquivos nomeados como <code>huffmanTree</code> encontra-se a codificação da árvore de Huffman.</li>
-  <li>Nos arquivos nomeados como <code>simbolTable</code> encontra-se a codificação que dá o código binário às palavras do texto extraído.</li>
+  <li>Nos arquivos nomeados como <code>huffmanTree</code> encontra-se as funções usadas para a criação da árvore de Huffman.</li>
+  <li>Nos arquivos nomeados como <code>simbolTable</code> encontra-se as funções usadas que dão o código binário às palavras do texto extraído.</li>
   <li>Nos arquivos nomeados como <code>manipulation</code> encontra-se a codificação da leitura do arquivo de texto, juntamente com a limpeza das strings encontradas nesse arquivo para que as palavras sejam analisadas de forma correta e também o retorno do código de Huffman para cada palavra.</li>
 </ul>
 
 ## Código
 
-Desconsiderando a codificação para o funcionamento da árvore de Huffman, foram usadas apenas três funções para realizar a compactação do arquivo de texto, são elas: <code>clearString(string line)</code>, <code>readText_insertList(TlistaHuff &l)</code> e <code>saveCodeHuffman(tabelaSimbolos tabela)</code>.
+Possuindo a codificação da árvore binária juntamente com o algoritmo de Huffman, foram usadas apenas mais três funções para realizar a compactação do arquivo de texto, são elas: <code>clearString(string line)</code>, <code>readText_insertList(TlistaHuff &l)</code> e <code>saveCodeHuffman(tabelaSimbolos tabela)</code>.
 
 ### Explicação da função <i>clearString(string line)</i>
 
@@ -50,20 +50,19 @@ Abaixo será descrito o passo a passo da função em uma forma de lista para mel
 Segue a codificação:
 
 ```C++
-string clearString(string line){
-  transform(line.begin(), line.end(), line.begin(), ::tolower);
+string clearString(string s){
+	string aux;
 
-  string temp;
-
-  for(int i = 0; i < int(line.size()); i++){
-    if(line[i] >= 'a' && line[i] <= 'z'){
-      temp = temp + line[i];
-    }
-  }
-
-  line = temp;
-
-  return line;
+	for (int i = 0; i < int(s.size()); i++) {
+		if (s[i] != '.' && s[i]!= ',' && s[i] != ':' && s[i] != ';' && s[i] != '?' && s[i] != '!' && s[i] != '(' && s[i] != ')' && s[i] != '[' && s[i] != ']' && s[i] != '{'
+			&& s[i] != '}' && s[i] != '+'&& s[i] != '=' && s[i] != '-' && s[i] != '*' && s[i] != '/' && s[i] != '%' && !isdigit(s[i])) {
+			
+			s[i] = tolower(s[i]);
+            		aux += s[i];
+		}
+	}
+ 
+	return aux;
 }
 ```
 
@@ -243,10 +242,9 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 ## Observações
 
 <ul>
-  <li>O texto a ser codificado deve estar em inglês, ou seja, sem acentuações.</li>
   <li>O arquivo de texto a ser lido, deve ser nomeado como <code>document.txt</code></li>
   <li>O número de repetições máximo deve ser maior que o número de repetições mínima, para que o cálculo de normalização não dê errado.</li>
-  <li>O texto não deve possuir parágrafos nem espaços após sua última palavra.</li>
+  <li>O texto não deve possuir espaços após sua última palavra.</li>
 </ul>
 
 ## Funcionamento
@@ -254,16 +252,16 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 <ul>
  <li>Inicialmente o arquivo deve ser baseado como o arquivo de texto abaixo:</li> <br>
   	<p align="center">
-  		<img src="/imgs/text.jpg">
+  		<img src="/imgs/text.png">
 	</p>	
  <li>Possuindo o arquivo de texto no padrão requerido, podemos executar o programa utilizando o método de compilação e execução. Executando o programa, o usuário receberá uma impressão do código de Huffman do texto utilizado e as mensagens de que o código foi escrito no arquivo binário e que o arquivo binário foi encerrado. Segue abaixo a demonstração:</li> <br>
  	<p align="center">
-  		<img src="/imgs/execute.jpg">
+  		<img src="/imgs/execute.png">
 	</p>
 	Lembrando que é sempre preferível dar um <code>make clean</code> antes de um <code>make</code> para executar o programa.
  <li>O arquivo binário será gerado e salvo na mesma pasta do arquivo de texto a ser codificado com o nome de <i>binaryFile</i>. Abaixo podemos ver o código gerado no arquivo binário aberto em um Blocos de Notas do Windows 11:</li> <br>
  	<p align="center">
-  		<img src="/imgs/binary.jpg">
+  		<img src="/imgs/binary.png">
 	</p>
 </ul>
 
