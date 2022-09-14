@@ -269,7 +269,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
 
 Como conclusão da compactação do arquivo de texto usado no código e a partir da fórmula de erro: $$Erro = |\frac{compac - normal}{normal}| * 100$$
 
-Foi possível observar um ganho de <strong>0,72%</strong> de tamanho de arquivo, sendo o arquivo de texto com <strong>2,76kB</strong> e o arquivo binário com <strong>2,74kB</strong>.
+Foi possível observar um ganho de <strong>0,72%</strong> de tamanho de arquivo, sendo o arquivo de texto com <strong>2,76kB</strong> e o arquivo binário com <strong>2,74kB</strong>. Podemos dizer que a porcentagem de compactação depende do texto a ser compactado, já que um texto com muita repetição de palavras, a compactação será maior, e um texto que não tem muita repetição de palavras, a compactação será mínima.
 
 ## Compilação e Execução
 
