@@ -245,6 +245,7 @@ void saveCodeHuffman(tabelaSimbolos tabela){
   <li>O arquivo de texto a ser lido, deve ser nomeado como <code>document.txt</code></li>
   <li>O número de repetições máximo deve ser maior que o número de repetições mínima, para que o cálculo de normalização não dê errado.</li>
   <li>O texto não deve possuir espaços após sua última palavra.</li>
+  <li>Caso deseje, há funções comentadas no código para a impressão da lista de palavras, seus cálculos de normalização e códigos próprios, para utilizá-las basta descomentar as partes do código com essas funções. Foi feito isso para que a impressão do código para o usuário fosse feita de forma mais limpa.</li>
 </ul>
 
 ## Funcionamento
