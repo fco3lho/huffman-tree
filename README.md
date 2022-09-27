@@ -3,6 +3,7 @@
 [![Linguagem C++](https://img.shields.io/badge/Linguagem-C%2B%2B-green.svg)]()
 [![requirement](https://img.shields.io/badge/IDE-Sublime%20Text-orange)](https://www.sublimetext.com)
 ![ISO](https://img.shields.io/badge/ISO-Linux-blueviolet)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 
 Elaborar uma árvore binária que utilize o código de Huffman para comprimir arquivos. Para tanto: 
 <ol>
@@ -295,3 +296,9 @@ O repositório possui um arquivo <i>Makefile</i> que realiza todo o procedimento
   </tr>
 </table>
 
+## Contatos
+
+<div align="center"> 
+  <a href="https://www.instagram.com/fco3lho/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href = "mailto:felipecampos50123@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/fco3lho/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
